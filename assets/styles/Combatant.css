@@ -1,0 +1,158 @@
+.Combatant {
+  width: 67px;
+  height: 14px;
+ /* background: url("file:///C:/Users/ulese/OneDrive/Escritorio/final/assets/images/ui/combatant-plate.png") no-repeat no-repeat;*/
+ background: url("../images/ui/combatant-plate.png") no-repeat no-repeat;
+  position:absolute;
+}
+
+.Battle .Combatant {
+  transform: scale(2);
+  transition: opacity 0.4s;
+}
+.Battle .Combatant[data-active="false"] {
+  opacity: 0;
+}
+.Battle .Combatant[data-active="true"] {
+  opacity: 1;
+}
+
+.Combatant[data-team="player"] {
+  left: 46px;
+  top: 120px;
+}
+.Combatant[data-team="enemy"] {
+  top: 50px;
+  right: 70px;
+}
+
+.Combatant_character_crop {
+  position: absolute;
+  bottom: 1px;
+  left:3px;
+  width: 22px;
+  height: 12px;
+  overflow:hidden;
+}
+.Combatant_character {
+  display:block;
+  position: absolute;
+  left: -4px;
+  bottom: -3px;
+  width: 20PX;
+  height: 20PX;
+}
+.Battle .Combatant_character_crop {
+  display:none;
+}
+
+.Combatant_name {
+  position: absolute;
+  left:3px;
+  top:-10px;
+  white-space: nowrap;
+  background: var(--menu-font-color);
+  color: #fff;
+  font-size: 5px; /*This is only so small because the component is scaled 2x in battle which is weird */
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 0;
+}
+.Combatant_type {
+  position: absolute;
+  left: 0px;
+  top: -5px;
+  width: 20px;
+  height: 20px;
+}
+
+.Combatant_life-container {
+  position: absolute;
+  left:20px;
+  top:4px;
+  width: 26px;
+  height: 3px;
+}
+.Combatant_life-container > rect {
+  transition: width 0.2s;
+}
+
+.Combatant_xp-container {
+  position: absolute;
+  left:20px;
+  top:8px;
+  width: 26px;
+  height: 2px;
+}
+.Combatant_level {
+  position: absolute;
+  font-size: 12px;
+  right: 2px;
+  top: -1px;
+  width: 17px;
+  height: 12px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: #F8C594;
+  border: 1px solid #A48465;
+  margin: 0;
+}
+
+.Combatant_status {
+  position: absolute;
+  font-size: 5px;
+  left: 47px;
+  bottom: -3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  margin: 0;
+}
+.Combatant_status[data-status="saucy"] {
+  color: red;
+}
+.Combatant_status[data-status="clumsy"] {
+  background: #582a79;
+}
+
+.Personaje {
+  position: absolute;
+  font-size: 6px;
+  transition: opacity 0.4s, transform 0.4s;
+  top: 100px; /* Cambia la posición vertical del texto */
+  right: 70px;
+  width: 70px; /* Ancho del contenedor */
+  height: 50px;
+  color: #fff;
+  display: inline;
+}
+.Personaje[data-team="player"] {
+  bottom: 73px;
+  left: 51px;
+}
+.Personaje[data-team="enemy"] {
+  top: 47px;
+  right: 100px;
+}
+.Personaje[data-active="false"] {
+  opacity:0;
+  transform: translate3d(0,16px,0) scale(2);
+}
+.Personaje[data-active="true"] {
+  opacity:1;
+  transform: translate3d(0,0,0) scale(2);
+}
+
+.Personaje .MathJax .MJX-TEX {
+  position: relative;
+  border: none;
+  display: list-item;
+}
+
+
+.Personaje .MathJax .MJX-TEX mjx-msup mjx-script {
+  /* Estilos para los superíndices y subíndices */
+  font-size: 4px; /* Tamaño de fuente */
+}

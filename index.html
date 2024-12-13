@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Math-hints</title>
+
+    <link rel="icon" href="assets/math.ico" type="image/x-icon">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+    <!-- Mathjax -->
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Overworld styles -->
+    <link href="assets/styles/global.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/TextMessage.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/SceneTransition.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/KeyboardMenu.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/Hud.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/TitleScreen.css" type="text/css" rel="stylesheet">
+    <!-- Battle css -->
+    <link href="assets/styles/Battle.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/Combatant.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/SubmissionMenu.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/Team.css" type="text/css" rel="stylesheet">
+    <link href="assets/styles/Menus.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="title">¡¡Aprende Matemáticas jugando!!</h1>
+
+    <div class="game-container">
+      <canvas class="game-canvas" width="352" height="298"></canvas>
+    </div>
+
+    <div class="button-container">
+      <button class="direction-button" data-direction="up">⬆️</button>
+      <div class="horizontal-buttons">
+        <button class="direction-button" data-direction="left">⬅️</button>
+        <button class="direction-button" data-direction="right">➡️</button>
+      </div>
+      <button class="direction-button" data-direction="down">⬇️</button>
+      
+    </div>
+
+    <div class="button-container2">
+      <button class="button-pause" id="pausaButton">Guardar</button>
+      <button class="button-enter" id="enterButton">Enter</button>
+    </div>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+          event.preventDefault();
+        }
+      });
+  </script>
+    
+
+    <!-- Script para saber la posicion ddel personaje y pocicionar objetos, bardas, obstaculos -->
+    <!--<script>
+      var informacionConcatenada = ""; // Variable para almacenar la información concatenada
+
+      document.addEventListener('keydown', function(event) {
+          if (event.key === 'q') {
+            console.clear();
+              var informacion = position.x/8;
+              var informacion2 = position.y/8; // Información a añadir
+              informacionConcatenada += '"' +informacion +','+informacion2+'"'+ ", "; // Concatenar la nueva información
+              console.log('Información actualizada:', informacionConcatenada); // Mostrar la información en la consola
+          }
+      });
+    </script>
+    -->
+
+    <!-- Content -->
+    <script src="assets/js/Content/personaje.js"></script>
+    <script src="assets/js/Content/actions.js"></script>
+    <script src="assets/js/Content/enemies.js"></script>
+
+    <!-- State -->
+    <script src="assets/js/State/PlayerState.js"></script>
+
+    <!-- Scripts -->
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/DirectionInput.js"></script>
+    <script src="assets/js/Overworld.js"></script>
+    <script src="assets/js/GameObject.js"></script>
+    <script src="assets/js/Person.js"></script>
+    <script src="assets/js/Sprite.js"></script>
+    <script src="assets/js/OverworldMap.js"></script>
+    <script src="assets/js/MessageData.js"></script>
+    <script src="assets/js/OverworldEvent.js"></script>
+    <script src="assets/js/TextMessage.js"></script>
+    <script src="assets/js/KeyPressListener.js"></script>
+    <script src="assets/js/RevealingText.js"></script>
+    <script src="assets/js/SceneTransition.js"></script>
+    <script src="assets/js/KeyboardMenu.js"></script>
+    <script src="assets/js/Hud.js"></script>
+    <script src="assets/js/PauseMenu.js"></script>
+    <script src="assets/js/CraftingMenu.js"></script>
+    <script src="assets/js/Progress.js"></script>
+    <script src="assets/js/TitleScreen.js"></script>
+
+    <!-- Battle -->
+    <script src="assets/js/Battle/Battle.js"></script>
+    <script src="assets/js/Battle/Combatant.js"></script>
+    <script src="assets/js/Battle/Team.js"></script>
+    <script src="assets/js/Battle/SubmissionMenu.js"></script>
+    <script src="assets/js/Battle/ReplacementMenu.js"></script>
+    <script src="assets/js/Battle/BattleEvent.js"></script>
+    <script src="assets/js/Battle/TurnCycle.js"></script>
+    <script src="assets/js/Battle/BattleAnimations.js"></script>
+
+    <script src="assets/js/init.js"></script>
+
+  </body>
+</html>
